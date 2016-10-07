@@ -16,6 +16,7 @@ If you just want to get started quickly, you can skip these. But you will need t
 * [Team Treehouse OSX Command Line introduction](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 * [Try Git - Interactive Tutorial](https://try.github.io/levels/1/challenges/1)
 * [Git Course (Treehouse)](https://teamtreehouse.com/library/git-basics)
+* [Carthage tutorial](https://www.raywenderlich.com/109330/carthage-tutorial-getting-started)
 
 -----
 
