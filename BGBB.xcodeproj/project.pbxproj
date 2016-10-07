@@ -13,6 +13,8 @@
 		3EFE61441DA7354700DA895D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFE61421DA7354700DA895D /* Main.storyboard */; };
 		3EFE61461DA7354700DA895D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EFE61451DA7354700DA895D /* Assets.xcassets */; };
 		3EFE61491DA7354700DA895D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFE61471DA7354700DA895D /* LaunchScreen.storyboard */; };
+		3EFE61581DA7421400DA895D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFE61571DA7421400DA895D /* Alamofire.framework */; };
+		3EFE615A1DA7421900DA895D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFE61591DA7421900DA895D /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3EFE61451DA7354700DA895D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EFE61481DA7354700DA895D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EFE614A1DA7354700DA895D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EFE61571DA7421400DA895D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3EFE61591DA7421900DA895D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EFE61581DA7421400DA895D /* Alamofire.framework in Frameworks */,
+				3EFE615A1DA7421900DA895D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				3EFE613B1DA7354700DA895D /* BGBB */,
 				3EFE613A1DA7354700DA895D /* Products */,
+				3EFE61561DA7421300DA895D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,72 @@
 		3EFE613B1DA7354700DA895D /* BGBB */ = {
 			isa = PBXGroup;
 			children = (
-				3EFE613C1DA7354700DA895D /* AppDelegate.swift */,
-				3EFE613E1DA7354700DA895D /* FirstViewController.swift */,
-				3EFE61401DA7354700DA895D /* SecondViewController.swift */,
-				3EFE61421DA7354700DA895D /* Main.storyboard */,
-				3EFE61451DA7354700DA895D /* Assets.xcassets */,
-				3EFE61471DA7354700DA895D /* LaunchScreen.storyboard */,
-				3EFE614A1DA7354700DA895D /* Info.plist */,
+				3EFE61551DA735B500DA895D /* MiscSwift */,
+				3EFE61541DA7359400DA895D /* Storyboards */,
+				3EFE61531DA7356900DA895D /* Data */,
+				3EFE61521DA7356200DA895D /* Views */,
+				3EFE61511DA7355C00DA895D /* Resources */,
+				3EFE61501DA7355000DA895D /* Controllers */,
 			);
 			path = BGBB;
+			sourceTree = "<group>";
+		};
+		3EFE61501DA7355000DA895D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3EFE61401DA7354700DA895D /* SecondViewController.swift */,
+				3EFE613E1DA7354700DA895D /* FirstViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3EFE61511DA7355C00DA895D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3EFE61451DA7354700DA895D /* Assets.xcassets */,
+				3EFE614A1DA7354700DA895D /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3EFE61521DA7356200DA895D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3EFE61531DA7356900DA895D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		3EFE61541DA7359400DA895D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3EFE61471DA7354700DA895D /* LaunchScreen.storyboard */,
+				3EFE61421DA7354700DA895D /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3EFE61551DA735B500DA895D /* MiscSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3EFE613C1DA7354700DA895D /* AppDelegate.swift */,
+			);
+			name = MiscSwift;
+			sourceTree = "<group>";
+		};
+		3EFE61561DA7421300DA895D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EFE61591DA7421900DA895D /* SwiftyJSON.framework */,
+				3EFE61571DA7421400DA895D /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +141,7 @@
 				3EFE61351DA7354600DA895D /* Sources */,
 				3EFE61361DA7354600DA895D /* Frameworks */,
 				3EFE61371DA7354600DA895D /* Resources */,
+				3EFE615B1DA7424F00DA895D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,6 +198,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EFE615B1DA7424F00DA895D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EFE61351DA7354600DA895D /* Sources */ = {
@@ -264,6 +347,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BGBB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bgbbgai.BGBB;
@@ -276,6 +363,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BGBB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bgbbgai.BGBB;
@@ -303,6 +394,7 @@
 				3EFE614F1DA7354700DA895D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
