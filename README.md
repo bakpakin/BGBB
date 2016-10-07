@@ -30,6 +30,7 @@ Xcode, [homebrew](http://brew.sh/index.html), and [carthage](https://github.com/
 3. Use homebrew to install carthage. Carthage is one of several dependency managers for Swift, and will
  make it easier for us to use other open source code to make our app awesome with minimal work. I have already
  added one depedency called Alamofire that will make doing HTTP networking much easier.
+
    ```bash
    # Install carthage with homebrew
    brew install carthage
