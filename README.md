@@ -24,14 +24,13 @@ To get ready to develop, you are going to need to download this repository, inst
 Xcode, [homebrew](http://brew.sh/index.html), and [carthage](https://github.com/Carthage/Carthage).
 
 1. Install Xcode from the Mac App store. Get the latest version (8.something) I think you might have to create a free Apple
-   Developer account.
+ Developer account.
 2. Install [homebrew](http://brew.sh/index.html). There is a command to paste into a terminal on the main site.
-   If you were wondering, homebrew is a [package manager](https://en.wikipedia.org/wiki/Package_manager) for mac. It just allows us to install lots of (mostly) developer-facing software really easily and consistently.
+ If you were wondering, homebrew is a [package manager](https://en.wikipedia.org/wiki/Package_manager) for mac. It just allows us to install lots of (mostly) developer-facing software really easily and consistently.
 3. Use homebrew to install carthage. Carthage is one of several dependency managers for Swift, and will
-   make it easier for us to use other open source code to make our app awesome with minimal work. I have already
-   added one depedency called Alamofire that will make doing HTTP networking much easier.
+ make it easier for us to use other open source code to make our app awesome with minimal work. I have already
+ added one depedency called Alamofire that will make doing HTTP networking much easier.
    ```bash
-   # Note: Lines that start with "#" are comments like in python
    brew install carthage
    ```
 4. Clone this project from Github. This can be done very easily from the terminal. (The pound signs are comments)
@@ -43,8 +42,8 @@ Xcode, [homebrew](http://brew.sh/index.html), and [carthage](https://github.com/
    git clone https://github.com/bakpakin/BGBB.git
    ```
 5. Use carthage to set up the dependencies. Alamofire is not included in the repository because it is not part
-   of our app. So after you clone the repository, you have to tell carthage to donwload the dependencies. From
-   the project directory (inside ~/Desktop/BGBB if you follow the above instruction verbatim), run the following command:
+ of our app. So after you clone the repository, you have to tell carthage to donwload the dependencies. From
+ the project directory (inside ~/Desktop/BGBB if you follow the above instruction verbatim), run the following command:
    ```bash
    # Note: the terminal (or shell) is always 'in' a directory - the current directory.
    # You can set that directory with the cd command. For example, "cd ~/Desktop/BGBB". The tilda
@@ -53,7 +52,7 @@ Xcode, [homebrew](http://brew.sh/index.html), and [carthage](https://github.com/
    carthage bootstrap --platform iOS
    ```
 6. Now open up Xcode and File>Open the iOS app. You should be able to run the app on the simulator and see
-   a whole lot of nothing interesting.
+  a whole lot of nothing interesting.
 
 ## Halp
 
