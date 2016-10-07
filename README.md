@@ -31,6 +31,7 @@ Xcode, [homebrew](http://brew.sh/index.html), and [carthage](https://github.com/
  make it easier for us to use other open source code to make our app awesome with minimal work. I have already
  added one depedency called Alamofire that will make doing HTTP networking much easier.
    ```bash
+   # Install carthage with homebrew
    brew install carthage
    ```
 4. Clone this project from Github. This can be done very easily from the terminal. (The pound signs are comments)
