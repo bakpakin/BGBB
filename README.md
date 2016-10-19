@@ -53,6 +53,11 @@ Xcode, [homebrew](http://brew.sh/index.html), and [carthage](https://github.com/
 
    carthage bootstrap --platform iOS
    ```
+  If this doesn't work, try fixing XCode with the following:
+  ```bash
+   sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
+  ```
+  and then re-running the carthage bootstrap command.
 6. Now open up Xcode and File>Open the iOS app. You should be able to run the app on the simulator and see
   a whole lot of nothing interesting.
 
