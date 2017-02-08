@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +26,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-2" y="-132"/>
         </scene>
         <!--Home-->
         <scene sceneID="4iH-bo-IlT">
@@ -42,19 +39,13 @@
                     <view key="view" contentMode="scaleToFill" id="8kP-9W-zYM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Js7-kF-fVl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="QmY-5S-yWA"/>
+                    <tabBarItem key="tabBarItem" title="More" selectedImage="first" id="QmY-5S-yWA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHV-6q-USh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829.60000000000002" y="1391.1544227886059"/>
+            <point key="canvasLocation" x="830" y="1396"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="IvV-wV-fkv">
@@ -69,16 +60,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Gwt-2R-hMh"/>
+                    <tabBarItem key="tabBarItem" title="Extra" selectedImage="second" id="Gwt-2R-hMh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77p-QB-aj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="-719"/>
+            <point key="canvasLocation" x="838" y="-852"/>
         </scene>
         <!--Standings-->
         <scene sceneID="QT9-a5-8hr">
             <objects>
-                <viewController title="Standings" id="39t-pY-azo" sceneMemberID="viewController">
+                <viewController title="Standings" id="39t-pY-azo" customClass="SecondViewController" customModule="BGBB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GRH-Zb-NvB"/>
                         <viewControllerLayoutGuide type="bottom" id="UGX-87-56Q"/>
@@ -86,13 +77,25 @@
                     <view key="view" contentMode="scaleToFill" id="F2s-td-FWW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-g8-kmS">
+                                <state key="normal" title="Print BGBB Homepage"/>
+                                <connections>
+                                    <action selector="getWebData:" destination="39t-pY-azo" eventType="touchUpInside" id="foB-mr-B8N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lkk-g8-kmS" firstAttribute="centerY" secondItem="F2s-td-FWW" secondAttribute="centerY" id="Iv6-Fb-3Ig"/>
+                            <constraint firstItem="lkk-g8-kmS" firstAttribute="centerX" secondItem="F2s-td-FWW" secondAttribute="centerX" id="nBm-xN-qbI"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1v0-eJ-g49"/>
+                    <tabBarItem key="tabBarItem" title="Standings" selectedImage="first" id="1v0-eJ-g49"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cms-rr-HJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="-32"/>
+            <point key="canvasLocation" x="830" y="-133"/>
         </scene>
         <!--More-->
         <scene sceneID="yxy-M7-jNN">
@@ -107,11 +110,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="viT-OD-8Gk"/>
+                    <tabBarItem key="tabBarItem" title="Scores" selectedImage="second" id="viT-OD-8Gk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzp-3m-Fm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="662"/>
+            <point key="canvasLocation" x="830" y="647"/>
         </scene>
         <!--Scores-->
         <scene sceneID="cBH-wP-hh8">
@@ -126,11 +129,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="biG-xg-R4o"/>
+                    <tabBarItem key="tabBarItem" title="Scores" selectedImage="first" id="biG-xg-R4o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggT-uQ-1cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="-1393"/>
+            <point key="canvasLocation" x="839" y="-1557"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
 </document>
