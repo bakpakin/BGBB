@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,6 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-g8-kmS">
+                                <rect key="frame" x="110" y="318.5" width="155" height="30"/>
                                 <state key="normal" title="Print BGBB Homepage"/>
                                 <connections>
                                     <action selector="getWebData:" destination="39t-pY-azo" eventType="touchUpInside" id="foB-mr-B8N"/>
@@ -119,7 +124,7 @@
         <!--Scores-->
         <scene sceneID="cBH-wP-hh8">
             <objects>
-                <viewController title="Scores" id="BlG-Nu-9Cb" sceneMemberID="viewController">
+                <viewController title="Scores" id="BlG-Nu-9Cb" customClass="FirstViewController" customModule="BGBB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qaj-96-ksz"/>
                         <viewControllerLayoutGuide type="bottom" id="i37-3s-xD3"/>
@@ -127,13 +132,90 @@
                     <view key="view" contentMode="scaleToFill" id="dcf-6G-vAF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-sf-Q10">
+                                <rect key="frame" x="0.0" y="410" width="375" height="208"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljH-Bf-jmr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sf-Lc-eKQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="barTintColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="0.99175074050000001" blue="0.9833167558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Scores" id="uXs-kd-pCD">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="IRQ-p8-36d"/>
+                                        <barButtonItem key="rightBarButtonItem" title="search" id="Ns8-kW-S5u"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Division" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39f-yf-abw">
+                                <rect key="frame" x="31" y="54" width="60" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Week of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpQ-ry-wxj">
+                                <rect key="frame" x="255" y="55" width="64" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIN-nu-Ob8">
+                                <rect key="frame" x="217" y="70" width="158" height="50"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8M-pV-pFv">
+                                <rect key="frame" x="-9" y="70" width="174" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tr6-U1-Nyh"/>
+                                </constraints>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mhk-WD-6uB">
+                                <rect key="frame" x="0.0" y="140" width="375" height="478"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U8M-pV-pFv" firstAttribute="leading" secondItem="dcf-6G-vAF" secondAttribute="leadingMargin" constant="-25" id="0aE-jw-AWC"/>
+                            <constraint firstItem="39f-yf-abw" firstAttribute="top" secondItem="5Sf-Lc-eKQ" secondAttribute="bottom" constant="20" id="38a-WK-lho"/>
+                            <constraint firstItem="39f-yf-abw" firstAttribute="leading" secondItem="dcf-6G-vAF" secondAttribute="leadingMargin" constant="30" id="6Vn-Ww-vIB"/>
+                            <constraint firstItem="5Sf-Lc-eKQ" firstAttribute="leading" secondItem="oFO-sf-Q10" secondAttribute="leading" id="ChV-9A-F3f"/>
+                            <constraint firstItem="U8M-pV-pFv" firstAttribute="bottom" secondItem="mIN-nu-Ob8" secondAttribute="bottom" id="Jj2-zs-aeW"/>
+                            <constraint firstItem="mIN-nu-Ob8" firstAttribute="leading" secondItem="39f-yf-abw" secondAttribute="trailing" constant="111" id="Ohj-Nt-Z7N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hpQ-ry-wxj" secondAttribute="trailing" constant="30" id="QDR-II-BLN"/>
+                            <constraint firstItem="oFO-sf-Q10" firstAttribute="bottom" secondItem="i37-3s-xD3" secondAttribute="top" id="XpO-xf-fSp"/>
+                            <constraint firstItem="mIN-nu-Ob8" firstAttribute="trailing" secondItem="oFO-sf-Q10" secondAttribute="trailing" id="Yxw-0Q-mi4"/>
+                            <constraint firstAttribute="trailing" secondItem="5Sf-Lc-eKQ" secondAttribute="trailing" id="azh-rW-HFE"/>
+                            <constraint firstItem="5Sf-Lc-eKQ" firstAttribute="trailing" secondItem="mIN-nu-Ob8" secondAttribute="trailing" id="bSM-NX-Rii"/>
+                            <constraint firstItem="U8M-pV-pFv" firstAttribute="top" secondItem="mIN-nu-Ob8" secondAttribute="top" id="msL-We-g2k"/>
+                            <constraint firstItem="hpQ-ry-wxj" firstAttribute="top" secondItem="5Sf-Lc-eKQ" secondAttribute="bottom" constant="20" id="mx9-8m-p8c"/>
+                            <constraint firstItem="mIN-nu-Ob8" firstAttribute="leading" secondItem="U8M-pV-pFv" secondAttribute="trailing" constant="52" id="nBt-gB-pRG"/>
+                            <constraint firstItem="5Sf-Lc-eKQ" firstAttribute="top" secondItem="dcf-6G-vAF" secondAttribute="top" id="neh-ce-4IF"/>
+                            <constraint firstItem="5Sf-Lc-eKQ" firstAttribute="leading" secondItem="dcf-6G-vAF" secondAttribute="leading" id="oyQ-hW-dLT"/>
+                            <constraint firstItem="U8M-pV-pFv" firstAttribute="top" secondItem="5Sf-Lc-eKQ" secondAttribute="bottom" constant="26" id="pF8-7X-6oD"/>
+                            <constraint firstItem="oFO-sf-Q10" firstAttribute="top" secondItem="dcf-6G-vAF" secondAttribute="top" constant="410" id="vNf-IS-9R7"/>
+                            <constraint firstItem="hpQ-ry-wxj" firstAttribute="leading" secondItem="U8M-pV-pFv" secondAttribute="trailing" constant="100" id="yY6-UO-HCX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scores" selectedImage="first" id="biG-xg-R4o"/>
+                    <connections>
+                        <outlet property="MyDivision" destination="39f-yf-abw" id="olT-H4-99K"/>
+                        <outlet property="MyTableView" destination="Mhk-WD-6uB" id="2nE-GW-avY"/>
+                        <outlet property="MyWeekOf" destination="hpQ-ry-wxj" id="M82-QW-Cgp"/>
+                        <outlet property="PickerDiv" destination="U8M-pV-pFv" id="ZIp-ks-eaR"/>
+                        <outlet property="PickerWeek" destination="mIN-nu-Ob8" id="bTf-EK-Q8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggT-uQ-1cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="-1557"/>
+            <point key="canvasLocation" x="837.60000000000002" y="-1557.5712143928038"/>
         </scene>
     </scenes>
     <resources>
