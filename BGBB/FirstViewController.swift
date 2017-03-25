@@ -29,6 +29,9 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         MyTableView.dataSource = self
         self.MyTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
+        LeagueData.single.addListener {
+            self.MyTableView.reloadData()
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     

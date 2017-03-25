@@ -61,7 +61,7 @@ class WebsiteData {
     }
     
     // Retrieve scores data
-    private func loadScoresTable(tableName : String, onDone : ([Game]) -> Void) {
+    private func loadScoresTable(tableName : String, onDone : @escaping ([Game]) -> Void) {
         Alamofire.request(scoresURL).responseString { response in
             var games : [Game] = []
             if let source = response.result.value {
@@ -91,6 +91,7 @@ class WebsiteData {
                         
                         games.append(game)
                     }
+                    onDone(games)
                 }
             } else {
                 
