@@ -1,4 +1,3 @@
 
 github "SwiftyJSON/SwiftyJSON"
-github "Alamofire/Alamofire" ~> 4.4
-github "tid-kijyun/Kanna" ~> 2.1.0
+github "tid-kijyun/Kanna"

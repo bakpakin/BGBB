@@ -49,13 +49,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F16F404A1E87046F00269A5F /* Embed Frameworks */ = {
+		3E000AFD1E86BD6D0087614E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F16F40491E87046F00269A5F /* Kanna.framework in Embed Frameworks */,
+				3E000AFF1E86BD720087614E /* SwiftyJSON.framework in Embed Frameworks */,
+				3E000B011E86BD760087614E /* Alamofire.framework in Embed Frameworks */,
+				3E000AFC1E86BD6C0087614E /* Kanna.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,7 +125,27 @@
 		3EFE61301DA7354600DA895D = {
 			isa = PBXGroup;
 			children = (
-				F16F40471E87046F00269A5F /* Kanna.framework */,
+				130007BD1E86EC6B005046D7 /* arrow-left.png */,
+				130007BE1E86EC6B005046D7 /* battery.png */,
+				130007BF1E86EC6B005046D7 /* calendar-active.png */,
+				130007C01E86EC6B005046D7 /* calendar.png */,
+				130007C11E86EC6B005046D7 /* change-team.png */,
+				130007C21E86EC6B005046D7 /* check-schedule.png */,
+				130007C31E86EC6B005046D7 /* check-scores.png */,
+				130007C41E86EC6B005046D7 /* check-standings.png */,
+				130007C51E86EC6B005046D7 /* faq.png */,
+				130007C61E86EC6B005046D7 /* home-active.png */,
+				130007C71E86EC6B005046D7 /* home.png */,
+				130007C81E86EC6B005046D7 /* logo.jpg */,
+				130007C91E86EC6B005046D7 /* menu-active.png */,
+				130007CA1E86EC6B005046D7 /* more.png */,
+				130007CB1E86EC6B005046D7 /* scores-active.png */,
+				130007CC1E86EC6B005046D7 /* scores.png */,
+				130007CD1E86EC6B005046D7 /* search.png */,
+				130007CE1E86EC6B005046D7 /* sponsors.png */,
+				130007CF1E86EC6B005046D7 /* standings-active.png */,
+				130007D01E86EC6B005046D7 /* standings.png */,
+				130007D11E86EC6B005046D7 /* Team Icons */,
 				3EFE613B1DA7354700DA895D /* BGBB */,
 				3EFE613A1DA7354700DA895D /* Products */,
 				3EFE61561DA7421300DA895D /* Frameworks */,
@@ -160,6 +182,7 @@
 				3EFE61401DA7354700DA895D /* SecondViewController.swift */,
 				3EFE613E1DA7354700DA895D /* FirstViewController.swift */,
 				F18B595E1E86DCE4008CD479 /* ScheduleViewController.swift */,
+				13683C571DD2A9290027A767 /* HomeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -215,7 +238,7 @@
 		3EFE61561DA7421300DA895D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F16F404B1E87050000269A5F /* Kanna.framework */,
+				3E132F201E86B70000E80233 /* Kanna.framework */,
 				3EFE61591DA7421900DA895D /* SwiftyJSON.framework */,
 				3EFE61571DA7421400DA895D /* Alamofire.framework */,
 			);
@@ -232,8 +255,8 @@
 				3EFE61351DA7354600DA895D /* Sources */,
 				3EFE61361DA7354600DA895D /* Frameworks */,
 				3EFE61371DA7354600DA895D /* Resources */,
-				3EFE615B1DA7424F00DA895D /* ShellScript */,
-				F16F404A1E87046F00269A5F /* Embed Frameworks */,
+				3EFE615B1DA7424F00DA895D /* Run Script */,
+				3E000AFD1E86BD6D0087614E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,7 +369,9 @@
 				130007B21E86E2CA005046D7 /* ExpandingTableViewCell.swift in Sources */,
 				130007AE1E86E2AB005046D7 /* FAQViewController.swift in Sources */,
 				3EFE613F1DA7354700DA895D /* FirstViewController.swift in Sources */,
-				F18B595F1E86DCE4008CD479 /* ScheduleViewController.swift in Sources */,
+				3E000B0D1E86DBD40087614E /* StringSearchable.swift in Sources */,
+				3E000B0B1E86C2A80087614E /* LeagueData.swift in Sources */,
+				3E000B091E86C1DE0087614E /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
