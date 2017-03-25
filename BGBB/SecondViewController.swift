@@ -22,9 +22,7 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func getWebData(_ sender: AnyObject) {
-        let collector = WebsiteData()
-        let data = LeagueData()
-        collector.getData(dataStore: data)
+       
     }
 
 }
