@@ -31,13 +31,13 @@ class LeagueData {
     }
     
     func triggerListerners() {
+        teams = []
+        for (_, v) in Team.cache {
+           teams.append(v)
+        }
         for l in listeners {
             l()
         }
-    }
-    
-    func addTeam(team: Team) {
-        teams.append(team)
     }
     
     func addRegularGame(game: Game) {

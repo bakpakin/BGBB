@@ -11,7 +11,7 @@ import Foundation
 class Team : StringSearchable {
 
     // Keeps a cache of initialized teams
-    private static var cache : [String : Team] = [:]
+    static var cache : [String : Team] = [:]
     
     let name : String
     var division : Int
