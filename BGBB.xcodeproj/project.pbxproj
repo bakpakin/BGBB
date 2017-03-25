@@ -245,7 +245,7 @@
 				TargetAttributes = {
 					3EFE61381DA7354600DA895D = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5ZL35CB8RG;
+						DevelopmentTeam = P5C8785726;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -458,7 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ZL35CB8RG;
+				DEVELOPMENT_TEAM = P5C8785726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -475,7 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ZL35CB8RG;
+				DEVELOPMENT_TEAM = P5C8785726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
