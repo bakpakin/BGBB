@@ -22,16 +22,9 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func getWebData(_ sender: AnyObject) {
-        Alamofire.request("http://bgbl.com/").responseString { response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-        }
+        let collector = WebsiteData()
+        let data = LeagueData()
+        collector.getData(dataStore: data)
     }
 
 }
