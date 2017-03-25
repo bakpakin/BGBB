@@ -32,7 +32,7 @@ class Team : StringSearchable {
         if let team = cache[realName] {
             return team
         } else {
-            print("Getting uninitialized team, assuming division. MIGHT BE WRONG!")
+            //print("Getting uninitialized team, assuming division. MIGHT BE WRONG!")
             let team = Team(name: realName, division: 1)
             cache[realName] = team
             return team

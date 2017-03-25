@@ -12,13 +12,15 @@ import Foundation
 
 class LeagueData {
     
+    static let single : LeagueData = LeagueData()
+    
     var teams : [Team] = []
     var standings : [Standing] = []
     var playoffGames : [Game] = []
     var regularGames : [Game] = []
     var schedule : [Game] = []
     
-    init () {
+    private init () {
         
     }
     
