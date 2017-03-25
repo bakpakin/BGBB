@@ -72,14 +72,13 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     
-    //let tableData1 = [LeagueData.single.regularGames[0].team1.name]
     let tableData1 = ["Trophy Room vs Hallo Bar", "Fenway Franks vs DBar", "Cathedral Station vs B&G Drillers"]
     let tableData2 = ["SFI vs CSRB", "dbar vs Club Cafe D2", "ZC's vs TMT", "MW vs TR"]
     let cellReuseIdentifier = "cell"
     
     func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
         if  pickerData1[self.PickerDiv.selectedRow(inComponent: 0)] == "I"{
-            return tableData1.count
+            return LeagueData.single.regularGames.count
         }
         else{
             return tableData2.count
@@ -87,13 +86,13 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         if  pickerData1[self.PickerDiv.selectedRow(inComponent: 0)] == "I"{
             let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
-            cell.textLabel?.text = tableData1[indexPath.row]
+            cell.textLabel?.text = LeagueData.single.regularGames[indexPath.row].getSearchString()
             return cell
         }
         else{
