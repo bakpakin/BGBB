@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SecondViewController: UIViewController {
 
@@ -20,6 +21,11 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func getWebData(_ sender: AnyObject) {
+        let collector = WebsiteData()
+        let data = LeagueData()
+        collector.getData(dataStore: data)
+    }
 
 }
 
