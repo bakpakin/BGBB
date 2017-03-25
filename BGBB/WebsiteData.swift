@@ -66,8 +66,10 @@ class WebsiteData {
                     for gameNode in doc.css("#\(tableName) tbody tr") {
                         
                         // Get game score
-                        let scoreStrings = gameNode.css(".column-2")[0].text!
+                        var scoreStrings = gameNode.css(".column-2")[0].text!
                             .components(separatedBy: "-")
+                        scoreStrings.append("0")
+                        scoreStrings.append("0")
                         let team1Score = Int(scoreStrings[0]) ?? 0
                         let team2Score = Int(scoreStrings[1]) ?? 0
 
@@ -80,10 +82,10 @@ class WebsiteData {
                                         team1Score: team1Score,
                                         team2: team2,
                                         team2Score: team2Score,
-                                        date: Date(),
-                                        location: "")
+                                        date: "",
+                                        location: "",
+                                        hasHappened : true)
                         
-                        print(game.getSearchString())
                         games.append(game)
                     }
                     
@@ -120,9 +122,9 @@ class WebsiteData {
                         
                         // Get date and location
                         let dateString = gameNode.css(".column-4")[0].content!
-                        let dateFormatter = DateFormatter()
-                        dateFormatter.dateFormat = "MMMM h:mma"
-                        let date = dateFormatter.date(from: dateString) ?? Date()
+                        //let dateFormatter = DateFormatter()
+                        //dateFormatter.dateFormat = "MMMM d, h:mm a"
+                        //let date = dateFormatter.date(from: dateString) ?? Date()
                         let location = gameNode.css(".column-4 em")[0].text!
                         
                         // Make game object
@@ -130,8 +132,9 @@ class WebsiteData {
                                         team1Score: 0,
                                         team2: team2,
                                         team2Score: 0,
-                                        date: date,
-                                        location: location)
+                                        date: dateString,
+                                        location: location,
+                                        hasHappened : false)
                         
                         print(game.getSearchString())
                         dataStore.schedule.append(game)

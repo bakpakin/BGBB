@@ -12,24 +12,27 @@ class Game : StringSearchable {
     
     let team1: Team
     let team2: Team
-    let date: Date
+    let date: String
     let location: String
     let team1Score: Int
     let team2Score: Int
+    let hasHappened: Bool
     
     init(team1 : Team, team1Score : Int,
          team2 : Team, team2Score : Int,
-         date : Date, location : String) {
+         date : String, location : String,
+         hasHappened : Bool) {
         self.team1 = team1
         self.team1Score = team1Score
         self.team2Score = team2Score
         self.team2 = team2
         self.date = date
         self.location = location
+        self.hasHappened = hasHappened
     }
     
     func getSearchString() -> String {
-        return "\(team1.getSearchString()) \(team2.getSearchString()) \(location) \(team1Score) \(team2Score)"
+        return "\(team1.getSearchString()) \(team2.getSearchString()) \(location) \(date) \(team1Score) \(team2Score)"
     }
 
 }
