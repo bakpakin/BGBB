@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E000AFC1E86BD6C0087614E /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E132F201E86B70000E80233 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3E000AFF1E86BD720087614E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFE61591DA7421900DA895D /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3E000B011E86BD760087614E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFE61571DA7421400DA895D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3E000B051E86BF430087614E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B041E86BF430087614E /* Team.swift */; };
-		3E000B071E86BF520087614E /* Standing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B061E86BF520087614E /* Standing.swift */; };
-		3E000B091E86C1DE0087614E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B081E86C1DE0087614E /* Game.swift */; };
-		3E000B0B1E86C2A80087614E /* LeagueData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B0A1E86C2A80087614E /* LeagueData.swift */; };
-		3E000B0D1E86DBD40087614E /* StringSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B0C1E86DBD40087614E /* StringSearchable.swift */; };
-		3E132F1D1E81ED0D00E80233 /* WebsiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E132F1C1E81ED0D00E80233 /* WebsiteData.swift */; };
+		130007AE1E86E2AB005046D7 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130007AD1E86E2AB005046D7 /* FAQViewController.swift */; };
+		130007B01E86E2B6005046D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130007AF1E86E2B6005046D7 /* LoginViewController.swift */; };
+		130007B21E86E2CA005046D7 /* ExpandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130007B11E86E2CA005046D7 /* ExpandingTableViewCell.swift */; };
+		130007B41E86E2E6005046D7 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130007B31E86E2E6005046D7 /* OptionsViewController.swift */; };
+		130007BC1E86E7D1005046D7 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130007BB1E86E7D1005046D7 /* MyCustomCell.swift */; };
+		130007D21E86EC6B005046D7 /* arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007BD1E86EC6B005046D7 /* arrow-left.png */; };
+		130007D31E86EC6B005046D7 /* battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007BE1E86EC6B005046D7 /* battery.png */; };
+		130007D41E86EC6B005046D7 /* calendar-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007BF1E86EC6B005046D7 /* calendar-active.png */; };
+		130007D51E86EC6B005046D7 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C01E86EC6B005046D7 /* calendar.png */; };
+		130007D61E86EC6B005046D7 /* change-team.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C11E86EC6B005046D7 /* change-team.png */; };
+		130007D71E86EC6B005046D7 /* check-schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C21E86EC6B005046D7 /* check-schedule.png */; };
+		130007D81E86EC6B005046D7 /* check-scores.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C31E86EC6B005046D7 /* check-scores.png */; };
+		130007D91E86EC6B005046D7 /* check-standings.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C41E86EC6B005046D7 /* check-standings.png */; };
+		130007DA1E86EC6B005046D7 /* faq.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C51E86EC6B005046D7 /* faq.png */; };
+		130007DB1E86EC6B005046D7 /* home-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C61E86EC6B005046D7 /* home-active.png */; };
+		130007DC1E86EC6B005046D7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C71E86EC6B005046D7 /* home.png */; };
+		130007DD1E86EC6B005046D7 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 130007C81E86EC6B005046D7 /* logo.jpg */; };
+		130007DE1E86EC6B005046D7 /* menu-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007C91E86EC6B005046D7 /* menu-active.png */; };
+		130007DF1E86EC6B005046D7 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CA1E86EC6B005046D7 /* more.png */; };
+		130007E01E86EC6B005046D7 /* scores-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CB1E86EC6B005046D7 /* scores-active.png */; };
+		130007E11E86EC6B005046D7 /* scores.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CC1E86EC6B005046D7 /* scores.png */; };
+		130007E21E86EC6B005046D7 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CD1E86EC6B005046D7 /* search.png */; };
+		130007E31E86EC6B005046D7 /* sponsors.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CE1E86EC6B005046D7 /* sponsors.png */; };
+		130007E41E86EC6B005046D7 /* standings-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CF1E86EC6B005046D7 /* standings-active.png */; };
+		130007E51E86EC6B005046D7 /* standings.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007D01E86EC6B005046D7 /* standings.png */; };
+		130007E61E86EC6B005046D7 /* Team Icons in Resources */ = {isa = PBXBuildFile; fileRef = 130007D11E86EC6B005046D7 /* Team Icons */; };
+		13683C581DD2A9290027A767 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13683C571DD2A9290027A767 /* HomeController.swift */; };
 		3EFE613D1DA7354700DA895D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE613C1DA7354700DA895D /* AppDelegate.swift */; };
 		3EFE613F1DA7354700DA895D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE613E1DA7354700DA895D /* FirstViewController.swift */; };
 		3EFE61411DA7354700DA895D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE61401DA7354700DA895D /* SecondViewController.swift */; };
@@ -41,13 +59,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3E000B041E86BF430087614E /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		3E000B061E86BF520087614E /* Standing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Standing.swift; sourceTree = "<group>"; };
-		3E000B081E86C1DE0087614E /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = ../Game.swift; sourceTree = "<group>"; };
-		3E000B0A1E86C2A80087614E /* LeagueData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueData.swift; sourceTree = "<group>"; };
-		3E000B0C1E86DBD40087614E /* StringSearchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSearchable.swift; sourceTree = "<group>"; };
-		3E132F1C1E81ED0D00E80233 /* WebsiteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteData.swift; sourceTree = "<group>"; };
-		3E132F201E86B70000E80233 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		130007AD1E86E2AB005046D7 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		130007AF1E86E2B6005046D7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		130007B11E86E2CA005046D7 /* ExpandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewCell.swift; sourceTree = "<group>"; };
+		130007B31E86E2E6005046D7 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		130007BB1E86E7D1005046D7 /* MyCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		130007BD1E86EC6B005046D7 /* arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-left.png"; path = "images/arrow-left.png"; sourceTree = "<group>"; };
+		130007BE1E86EC6B005046D7 /* battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = battery.png; path = images/battery.png; sourceTree = "<group>"; };
+		130007BF1E86EC6B005046D7 /* calendar-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar-active.png"; path = "images/calendar-active.png"; sourceTree = "<group>"; };
+		130007C01E86EC6B005046D7 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = images/calendar.png; sourceTree = "<group>"; };
+		130007C11E86EC6B005046D7 /* change-team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "change-team.png"; path = "images/change-team.png"; sourceTree = "<group>"; };
+		130007C21E86EC6B005046D7 /* check-schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "check-schedule.png"; path = "images/check-schedule.png"; sourceTree = "<group>"; };
+		130007C31E86EC6B005046D7 /* check-scores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "check-scores.png"; path = "images/check-scores.png"; sourceTree = "<group>"; };
+		130007C41E86EC6B005046D7 /* check-standings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "check-standings.png"; path = "images/check-standings.png"; sourceTree = "<group>"; };
+		130007C51E86EC6B005046D7 /* faq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = faq.png; path = images/faq.png; sourceTree = "<group>"; };
+		130007C61E86EC6B005046D7 /* home-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-active.png"; path = "images/home-active.png"; sourceTree = "<group>"; };
+		130007C71E86EC6B005046D7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = images/home.png; sourceTree = "<group>"; };
+		130007C81E86EC6B005046D7 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = images/logo.jpg; sourceTree = "<group>"; };
+		130007C91E86EC6B005046D7 /* menu-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-active.png"; path = "images/menu-active.png"; sourceTree = "<group>"; };
+		130007CA1E86EC6B005046D7 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = images/more.png; sourceTree = "<group>"; };
+		130007CB1E86EC6B005046D7 /* scores-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scores-active.png"; path = "images/scores-active.png"; sourceTree = "<group>"; };
+		130007CC1E86EC6B005046D7 /* scores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scores.png; path = images/scores.png; sourceTree = "<group>"; };
+		130007CD1E86EC6B005046D7 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
+		130007CE1E86EC6B005046D7 /* sponsors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sponsors.png; path = images/sponsors.png; sourceTree = "<group>"; };
+		130007CF1E86EC6B005046D7 /* standings-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "standings-active.png"; path = "images/standings-active.png"; sourceTree = "<group>"; };
+		130007D01E86EC6B005046D7 /* standings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = standings.png; path = images/standings.png; sourceTree = "<group>"; };
+		130007D11E86EC6B005046D7 /* Team Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Team Icons"; path = "images/Team Icons"; sourceTree = "<group>"; };
+		13683C571DD2A9290027A767 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3EFE61391DA7354700DA895D /* BGBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFE613C1DA7354700DA895D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EFE613E1DA7354700DA895D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +112,27 @@
 		3EFE61301DA7354600DA895D = {
 			isa = PBXGroup;
 			children = (
+				130007BD1E86EC6B005046D7 /* arrow-left.png */,
+				130007BE1E86EC6B005046D7 /* battery.png */,
+				130007BF1E86EC6B005046D7 /* calendar-active.png */,
+				130007C01E86EC6B005046D7 /* calendar.png */,
+				130007C11E86EC6B005046D7 /* change-team.png */,
+				130007C21E86EC6B005046D7 /* check-schedule.png */,
+				130007C31E86EC6B005046D7 /* check-scores.png */,
+				130007C41E86EC6B005046D7 /* check-standings.png */,
+				130007C51E86EC6B005046D7 /* faq.png */,
+				130007C61E86EC6B005046D7 /* home-active.png */,
+				130007C71E86EC6B005046D7 /* home.png */,
+				130007C81E86EC6B005046D7 /* logo.jpg */,
+				130007C91E86EC6B005046D7 /* menu-active.png */,
+				130007CA1E86EC6B005046D7 /* more.png */,
+				130007CB1E86EC6B005046D7 /* scores-active.png */,
+				130007CC1E86EC6B005046D7 /* scores.png */,
+				130007CD1E86EC6B005046D7 /* search.png */,
+				130007CE1E86EC6B005046D7 /* sponsors.png */,
+				130007CF1E86EC6B005046D7 /* standings-active.png */,
+				130007D01E86EC6B005046D7 /* standings.png */,
+				130007D11E86EC6B005046D7 /* Team Icons */,
 				3EFE613B1DA7354700DA895D /* BGBB */,
 				3EFE613A1DA7354700DA895D /* Products */,
 				3EFE61561DA7421300DA895D /* Frameworks */,
@@ -104,8 +163,12 @@
 		3EFE61501DA7355000DA895D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				130007B31E86E2E6005046D7 /* OptionsViewController.swift */,
+				130007AD1E86E2AB005046D7 /* FAQViewController.swift */,
+				130007AF1E86E2B6005046D7 /* LoginViewController.swift */,
 				3EFE61401DA7354700DA895D /* SecondViewController.swift */,
 				3EFE613E1DA7354700DA895D /* FirstViewController.swift */,
+				13683C571DD2A9290027A767 /* HomeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +185,8 @@
 		3EFE61521DA7356200DA895D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				130007B11E86E2CA005046D7 /* ExpandingTableViewCell.swift */,
+				130007BB1E86E7D1005046D7 /* MyCustomCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -195,7 +260,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Calvin Rose";
 				TargetAttributes = {
 					3EFE61381DA7354600DA895D = {
@@ -228,9 +293,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130007DE1E86EC6B005046D7 /* menu-active.png in Resources */,
+				130007D51E86EC6B005046D7 /* calendar.png in Resources */,
+				130007DD1E86EC6B005046D7 /* logo.jpg in Resources */,
+				130007D21E86EC6B005046D7 /* arrow-left.png in Resources */,
+				130007E31E86EC6B005046D7 /* sponsors.png in Resources */,
+				130007E61E86EC6B005046D7 /* Team Icons in Resources */,
+				130007DC1E86EC6B005046D7 /* home.png in Resources */,
+				130007D91E86EC6B005046D7 /* check-standings.png in Resources */,
+				130007E11E86EC6B005046D7 /* scores.png in Resources */,
+				130007D31E86EC6B005046D7 /* battery.png in Resources */,
+				130007E41E86EC6B005046D7 /* standings-active.png in Resources */,
 				3EFE61491DA7354700DA895D /* LaunchScreen.storyboard in Resources */,
+				130007D71E86EC6B005046D7 /* check-schedule.png in Resources */,
+				130007DA1E86EC6B005046D7 /* faq.png in Resources */,
+				130007DF1E86EC6B005046D7 /* more.png in Resources */,
+				130007E51E86EC6B005046D7 /* standings.png in Resources */,
+				130007D61E86EC6B005046D7 /* change-team.png in Resources */,
 				3EFE61461DA7354700DA895D /* Assets.xcassets in Resources */,
 				3EFE61441DA7354700DA895D /* Main.storyboard in Resources */,
+				130007E21E86EC6B005046D7 /* search.png in Resources */,
+				130007D41E86EC6B005046D7 /* calendar-active.png in Resources */,
+				130007D81E86EC6B005046D7 /* check-scores.png in Resources */,
+				130007E01E86EC6B005046D7 /* scores-active.png in Resources */,
+				130007DB1E86EC6B005046D7 /* home-active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130007BC1E86E7D1005046D7 /* MyCustomCell.swift in Sources */,
+				130007B01E86E2B6005046D7 /* LoginViewController.swift in Sources */,
+				130007B41E86E2E6005046D7 /* OptionsViewController.swift in Sources */,
 				3EFE61411DA7354700DA895D /* SecondViewController.swift in Sources */,
-				3E000B071E86BF520087614E /* Standing.swift in Sources */,
-				3E132F1D1E81ED0D00E80233 /* WebsiteData.swift in Sources */,
-				3E000B051E86BF430087614E /* Team.swift in Sources */,
+				13683C581DD2A9290027A767 /* HomeController.swift in Sources */,
 				3EFE613D1DA7354700DA895D /* AppDelegate.swift in Sources */,
+				130007B21E86E2CA005046D7 /* ExpandingTableViewCell.swift in Sources */,
+				130007AE1E86E2AB005046D7 /* FAQViewController.swift in Sources */,
 				3EFE613F1DA7354700DA895D /* FirstViewController.swift in Sources */,
 				3E000B0D1E86DBD40087614E /* StringSearchable.swift in Sources */,
 				3E000B0B1E86C2A80087614E /* LeagueData.swift in Sources */,
