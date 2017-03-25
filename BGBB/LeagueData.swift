@@ -20,8 +20,20 @@ class LeagueData {
     var regularGames : [Game] = []
     var schedule : [Game] = []
     
+    var listeners : [(Void) -> Void] = []
+    
     private init () {
         
+    }
+    
+    func addListener(listener: @escaping (Void) -> Void) {
+        listeners.append(listener)
+    }
+    
+    func triggerListerners() {
+        for l in listeners {
+            l()
+        }
     }
     
     func addTeam(team: Team) {

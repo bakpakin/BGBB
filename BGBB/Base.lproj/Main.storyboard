@@ -435,10 +435,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIr-OF-wGY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <rect key="frame" x="-4" y="20" width="383" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAq-md-F8D">
-                                        <rect key="frame" x="157" y="0.0" width="62" height="40"/>
+                                        <rect key="frame" x="161" y="0.0" width="62" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -454,7 +454,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bje-AP-EhC">
-                                        <rect key="frame" x="296" y="0.0" width="63" height="40"/>
+                                        <rect key="frame" x="304" y="0.0" width="63" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Search">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -510,7 +510,7 @@
                             <constraint firstItem="CXc-IT-xdi" firstAttribute="leading" secondItem="Vki-bM-sua" secondAttribute="leadingMargin" constant="-20" id="2SY-ph-Seg"/>
                             <constraint firstItem="dIr-OF-wGY" firstAttribute="top" secondItem="rIw-5J-qLw" secondAttribute="bottom" id="AIw-1n-RbX"/>
                             <constraint firstAttribute="trailing" secondItem="9GO-ZU-M7l" secondAttribute="trailing" id="CAY-yX-ICj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dIr-OF-wGY" secondAttribute="trailing" constant="-16" id="GUv-rz-4p9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dIr-OF-wGY" secondAttribute="trailing" constant="-20" id="GUv-rz-4p9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hOj-BY-L0A" secondAttribute="trailing" constant="-20" id="JiH-O0-Su4"/>
                             <constraint firstItem="zet-Mf-f0a" firstAttribute="centerX" secondItem="hOj-BY-L0A" secondAttribute="centerX" id="POT-5b-8AY"/>
                             <constraint firstItem="CXc-IT-xdi" firstAttribute="height" secondItem="hOj-BY-L0A" secondAttribute="height" id="QhU-aP-Q76"/>
@@ -527,7 +527,7 @@
                             <constraint firstItem="CXc-IT-xdi" firstAttribute="width" secondItem="hOj-BY-L0A" secondAttribute="width" id="eyA-Av-q0I"/>
                             <constraint firstItem="DFZ-cL-UXT" firstAttribute="centerX" secondItem="CXc-IT-xdi" secondAttribute="centerX" id="g2q-zx-4fG"/>
                             <constraint firstItem="9GO-ZU-M7l" firstAttribute="centerX" secondItem="Vki-bM-sua" secondAttribute="centerX" id="vgB-LE-ufN"/>
-                            <constraint firstItem="dIr-OF-wGY" firstAttribute="leading" secondItem="Vki-bM-sua" secondAttribute="leadingMargin" constant="-16" id="vtT-Ni-AVi"/>
+                            <constraint firstItem="dIr-OF-wGY" firstAttribute="leading" secondItem="Vki-bM-sua" secondAttribute="leadingMargin" constant="-20" id="vtT-Ni-AVi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scores" selectedImage="first" id="QLD-a8-lKv"/>
