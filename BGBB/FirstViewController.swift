@@ -72,7 +72,7 @@ class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     
-    
+    //let tableData1 = [LeagueData.single.regularGames[0].team1.name]
     let tableData1 = ["Trophy Room vs Hallo Bar", "Fenway Franks vs DBar", "Cathedral Station vs B&G Drillers"]
     let tableData2 = ["SFI vs CSRB", "dbar vs Club Cafe D2", "ZC's vs TMT", "MW vs TR"]
     let cellReuseIdentifier = "cell"
