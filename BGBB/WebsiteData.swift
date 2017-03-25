@@ -46,7 +46,9 @@ class WebsiteData {
                             let wins = Int(chunks[1])!
                             let losses = Int(chunks[2])!
                             
-                            let standing = Standing(team: Team.get(name: teamName), wins: wins, losses: losses)
+                            let team = Team.get(name: teamName)
+                            team.division = division
+                            let standing = Standing(team: team, wins: wins, losses: losses)
                             dataStore.standings.append(standing)
                         }
                     }
