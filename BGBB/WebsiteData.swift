@@ -52,6 +52,7 @@ class WebsiteData {
                             dataStore.standings.append(standing)
                         }
                     }
+                    dataStore.triggerListerners()
                 } else {
                     print("could not parse html")
                 }
@@ -60,7 +61,7 @@ class WebsiteData {
     }
     
     // Retrieve scores data
-    private func loadScoresTable(tableName : String, onDone : ([Game]) -> Void) {
+    private func loadScoresTable(tableName : String, onDone : @escaping ([Game]) -> Void) {
         Alamofire.request(scoresURL).responseString { response in
             var games : [Game] = []
             if let source = response.result.value {
@@ -90,7 +91,7 @@ class WebsiteData {
                         
                         games.append(game)
                     }
-                    
+                    onDone(games)
                 }
             } else {
                 
@@ -102,9 +103,11 @@ class WebsiteData {
     private func loadScores(dataStore : LeagueData) {
         loadScoresTable(tableName: "tablepress-8") { games in
             dataStore.regularGames = games
+            dataStore.triggerListerners()
         }
         loadScoresTable(tableName: "tablepress-9") { games in
             dataStore.playoffGames = games
+            dataStore.triggerListerners()
         }
     }
     
@@ -141,6 +144,7 @@ class WebsiteData {
                         print(game.getSearchString())
                         dataStore.schedule.append(game)
                     }
+                    dataStore.triggerListerners()
                 }
             } else {
                 
