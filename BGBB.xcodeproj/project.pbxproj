@@ -33,7 +33,7 @@
 		130007E41E86EC6B005046D7 /* standings-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007CF1E86EC6B005046D7 /* standings-active.png */; };
 		130007E51E86EC6B005046D7 /* standings.png in Resources */ = {isa = PBXBuildFile; fileRef = 130007D01E86EC6B005046D7 /* standings.png */; };
 		130007E61E86EC6B005046D7 /* Team Icons in Resources */ = {isa = PBXBuildFile; fileRef = 130007D11E86EC6B005046D7 /* Team Icons */; };
-		13683C581DD2A9290027A767 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13683C571DD2A9290027A767 /* HomeController.swift */; };
+		13E87DF61E873B6400AFE088 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E87DF51E873B6400AFE088 /* HomeScreenViewController.swift */; };
 		3E000B141E86F6C30087614E /* WebsiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B0E1E86F6C30087614E /* WebsiteData.swift */; };
 		3E000B151E86F6C30087614E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B0F1E86F6C30087614E /* Team.swift */; };
 		3E000B161E86F6C30087614E /* StringSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E000B101E86F6C30087614E /* StringSearchable.swift */; };
@@ -97,7 +97,7 @@
 		130007CF1E86EC6B005046D7 /* standings-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "standings-active.png"; path = "../images/standings-active.png"; sourceTree = "<group>"; };
 		130007D01E86EC6B005046D7 /* standings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = standings.png; path = ../images/standings.png; sourceTree = "<group>"; };
 		130007D11E86EC6B005046D7 /* Team Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Team Icons"; path = "../images/Team Icons"; sourceTree = "<group>"; };
-		13683C571DD2A9290027A767 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		13E87DF51E873B6400AFE088 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		3E000B0E1E86F6C30087614E /* WebsiteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteData.swift; sourceTree = "<group>"; };
 		3E000B0F1E86F6C30087614E /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		3E000B101E86F6C30087614E /* StringSearchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSearchable.swift; sourceTree = "<group>"; };
@@ -166,10 +166,10 @@
 			children = (
 				130007B31E86E2E6005046D7 /* OptionsViewController.swift */,
 				130007AD1E86E2AB005046D7 /* FAQViewController.swift */,
+				13E87DF51E873B6400AFE088 /* HomeScreenViewController.swift */,
 				130007AF1E86E2B6005046D7 /* LoginViewController.swift */,
 				3EFE61401DA7354700DA895D /* SecondViewController.swift */,
 				3EFE613E1DA7354700DA895D /* FirstViewController.swift */,
-				13683C571DD2A9290027A767 /* HomeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -374,7 +374,6 @@
 				130007B41E86E2E6005046D7 /* OptionsViewController.swift in Sources */,
 				3EFE61411DA7354700DA895D /* SecondViewController.swift in Sources */,
 				3E000B181E86F6C30087614E /* LeagueData.swift in Sources */,
-				13683C581DD2A9290027A767 /* HomeController.swift in Sources */,
 				3E000B171E86F6C30087614E /* Standing.swift in Sources */,
 				3E000B141E86F6C30087614E /* WebsiteData.swift in Sources */,
 				3E000B161E86F6C30087614E /* StringSearchable.swift in Sources */,
@@ -383,6 +382,7 @@
 				3E000B151E86F6C30087614E /* Team.swift in Sources */,
 				130007AE1E86E2AB005046D7 /* FAQViewController.swift in Sources */,
 				3EFE613F1DA7354700DA895D /* FirstViewController.swift in Sources */,
+				13E87DF61E873B6400AFE088 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
