@@ -15,7 +15,7 @@ class Team : StringSearchable {
     
     let name : String
     var division : Int
-    
+    var imageURL = ""
     private static func normalizeName(name : String) -> String {
         let components = name.components(separatedBy: .whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")

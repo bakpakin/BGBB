@@ -109,7 +109,7 @@ class WebsiteData {
     }
     
     // Get schedule
-    private func loadSchedule(dataStore : LeagueData) {
+    public func loadSchedule(dataStore : LeagueData) {
         Alamofire.request(scheduleURL).responseString { response in
             if let source = response.result.value {
                 if let doc = HTML(html: source, encoding: .utf8) {
@@ -117,8 +117,15 @@ class WebsiteData {
                     for gameNode in doc.css("#tablepress-4 tbody tr") {
                         // Get teams
                         let team1 = Team.get(name: gameNode.css(".column-1 strong")[0].text!)
+                        let iurl1 = gameNode.css(".column-1 img")[0]["src"]!
+                        if (team1.imageURL == "") {
+                            team1.imageURL = iurl1
+                        }
                         let team2 = Team.get(name: gameNode.css(".column-2 strong")[0].text!)
-                        
+                        let iurl2 = gameNode.css(".column-2 img")[0]["src"]!
+                        if (team2.imageURL == "") {
+                            team2.imageURL = iurl2
+                        }
                         // Get week
                         //let week = Int(gameNode.css(".column-3")[0]).text!
                         
