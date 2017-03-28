@@ -32,24 +32,25 @@ class WebsiteData {
                 print("got source...")
                 if let doc = HTML(html: source, encoding: .utf8) {
                     let divisionTables = ["#tablepress-6 tbody tr", "#tablepress-7 tbody tr"]
-                    // Parse doc
                     dataStore.standings = []
                     for division in 1...2 {
                         let selector = divisionTables[division - 1]
-                        print("Division \(division):")
-                        for standing in doc.css(selector).dropFirst() {
-                            var chunks : [String] = []
-                            for subdoc in standing.css("td") {
-                                chunks.append(subdoc.text ?? "Text get failed")
+                        let matches = doc.css(selector)
+                        if (matches.count != 0) {
+                            for standing in matches.dropFirst() {
+                                var chunks : [String] = []
+                                for subdoc in standing.css("td") {
+                                    chunks.append(subdoc.text ?? "Text get failed")
+                                }
+                                let teamName = chunks[0]
+                                let wins = Int(chunks[1])!
+                                let losses = Int(chunks[2])!
+                                
+                                let team = Team.get(name: teamName)
+                                team.division = division
+                                let standing = Standing(team: team, wins: wins, losses: losses)
+                                dataStore.standings.append(standing)
                             }
-                            let teamName = chunks[0]
-                            let wins = Int(chunks[1])!
-                            let losses = Int(chunks[2])!
-                            
-                            let team = Team.get(name: teamName)
-                            team.division = division
-                            let standing = Standing(team: team, wins: wins, losses: losses)
-                            dataStore.standings.append(standing)
                         }
                     }
                     dataStore.triggerListerners()
@@ -69,7 +70,10 @@ class WebsiteData {
                     for gameNode in doc.css("#\(tableName) tbody tr") {
                         
                         // Get game score
-                        var scoreStrings = gameNode.css(".column-2")[0].text!
+                        let scoreMatches = gameNode.css(".column-2")
+                        if scoreMatches.count == 0 { continue }
+                        
+                        var scoreStrings = scoreMatches[0].text!
                             .components(separatedBy: "-")
                         scoreStrings.append("0")
                         scoreStrings.append("0")
@@ -77,8 +81,11 @@ class WebsiteData {
                         let team2Score = Int(scoreStrings[1]) ?? 0
 
                         // Get teams
-                        let team1 = Team.get(name: gameNode.css(".column-1 strong")[0].text!)
-                        let team2 = Team.get(name: gameNode.css(".column-3 strong")[0].text!)
+                        let team1Matches = gameNode.css(".column-1 strong")
+                        let team2Matches = gameNode.css(".column-3 strong")
+                        if team1Matches.count == 0 || team2Matches.count == 0 { continue }
+                        let team1 = Team.get(name: team1Matches[0].text ?? "No Team Name")
+                        let team2 = Team.get(name: team2Matches[0].text ?? "No Team Name")
                         
                         // Make game object
                         let game = Game(team1: team1,
@@ -119,18 +126,24 @@ class WebsiteData {
                     dataStore.schedule = []
                     for gameNode in doc.css("#tablepress-4 tbody tr") {
                         // Get teams
-                        let team1 = Team.get(name: gameNode.css(".column-1 strong")[0].text!)
-                        let team2 = Team.get(name: gameNode.css(".column-2 strong")[0].text!)
+                        let team1Matches = gameNode.css(".column-1 strong")
+                        let team2Matches = gameNode.css(".column-w strong")
+                        if team1Matches.count == 0 || team2Matches.count == 0 { continue }
+                        let team1 = Team.get(name: team1Matches[0].text!)
+                        let team2 = Team.get(name: team2Matches[0].text!)
                         
                         // Get week
                         //let week = Int(gameNode.css(".column-3")[0]).text!
                         
                         // Get date and location
-                        let dateString = gameNode.css(".column-4")[0].content!
+                        let dateStringMatches = gameNode.css(".column-4")
+                        let locationMatches = gameNode.css(".column-4 em")
+                        if dateStringMatches.count == 0 || locationMatches.count == 0 { continue }
+                        let dateString = dateStringMatches[0].content!
                         //let dateFormatter = DateFormatter()
                         //dateFormatter.dateFormat = "MMMM d, h:mm a"
                         //let date = dateFormatter.date(from: dateString) ?? Date()
-                        let location = gameNode.css(".column-4 em")[0].text!
+                        let location = locationMatches[0].text!
                         
                         // Make game object
                         let game = Game(team1: team1,
