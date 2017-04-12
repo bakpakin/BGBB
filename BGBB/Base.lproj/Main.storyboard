@@ -283,36 +283,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgB-uZ-0Bi">
-                                <rect key="frame" x="0.0" y="125" width="375" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="sponsor-bankhead-groipen1.gif"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6a-Ng-snT">
-                                <rect key="frame" x="0.0" y="245" width="375" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="sponsor-cathedral-station1.gif"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE0-XD-pQy">
-                                <rect key="frame" x="0.0" y="336" width="375" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="sponsor-club-cafe1.gif"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzE-xn-ShY">
-                                <rect key="frame" x="0.0" y="425" width="200" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="sponsor-fenway-health1.gif"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PW-Yv-O7q">
-                                <rect key="frame" x="-146" y="575" width="264" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="sponsor-melman-chiropractic-group1.gif"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3g-Q1-yFJ">
-                                <rect key="frame" x="0.0" y="525" width="260" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="sponsor-harp-and-bard1.jpg"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -750,12 +720,6 @@
         <image name="first" width="30" height="30"/>
         <image name="logo.jpg" width="300" height="184"/>
         <image name="second" width="30" height="30"/>
-        <image name="sponsor-bankhead-groipen1.gif" width="412" height="92"/>
-        <image name="sponsor-cathedral-station1.gif" width="412" height="92"/>
-        <image name="sponsor-club-cafe1.gif" width="412" height="92"/>
-        <image name="sponsor-fenway-health1.gif" width="412" height="92"/>
-        <image name="sponsor-harp-and-bard1.jpg" width="412" height="92"/>
-        <image name="sponsor-melman-chiropractic-group1.gif" width="412" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="r6N-OF-9pz"/>
