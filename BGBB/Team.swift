@@ -11,24 +11,24 @@ import Foundation
 class Team : StringSearchable {
 
     // Keeps a cache of initialized teams
-    private static var cache : [String : Team] = [:]
+    fileprivate static var cache : [String : Team] = [:]
     
     let name : String
     var division : Int
     var imageURL = ""
-    private static func normalizeName(name : String) -> String {
+    fileprivate static func normalizeName(_ name : String) -> String {
         let components = name.components(separatedBy: .whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")
     }
     
     init(name : String, division : Int) {
-        self.name = Team.normalizeName(name: name)
+        self.name = Team.normalizeName(name)
         self.division = division
         Team.cache[self.name] = self
     }
     
-    static func get(name : String) -> Team {
-        let realName = Team.normalizeName(name: name)
+    static func get(_ name : String) -> Team {
+        let realName = Team.normalizeName(name)
         if let team = cache[realName] {
             return team
         } else {

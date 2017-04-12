@@ -36,18 +36,18 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier) as! TableViewCell
-        
+        let temp : WebsiteData
+        temp = WebsiteData()
+        let info : LeagueData!
+        info = LeagueData()
+        temp.loadSchedule(info)
+        let team1_name = info.schedule[0].team1.name
+        let team2_name = info.schedule[0].team2.name
+        let date = info.schedule[0].date
+        let location = info.schedule[0].location
+        cell.label1.text = team1_name
+        cell.label2.text = team2_name
+        cell.Date.text = date
         return cell
     }
-    
-  /*  func URLtoImage(url : String) -> UIImage{
-        let url = NSURL(string:"http://cdn.businessoffashion.com/site/uploads/2014/09/Karl-Lagerfeld-Self-Portrait-Courtesy.jpg")
-        let data = NSData(contentsOfURL:url!)
-        if data != nil {
-            imageURL.image = UIImage(data:data!)
-        }
-    }
-   */ 
 }
-
-

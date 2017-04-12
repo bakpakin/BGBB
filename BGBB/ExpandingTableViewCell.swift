@@ -32,7 +32,7 @@ class ExpandingTableViewCell: UITableViewCell {
          
     }
     
-    func set(content: ExpandingTableViewCellContent) {
+    func set(_ content: ExpandingTableViewCellContent) {
         self.titleLabel.text = content.title
         self.subtitleLabel.text = content.expanded ? content.subtitle : ""
     }

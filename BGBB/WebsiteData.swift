@@ -19,14 +19,14 @@ class WebsiteData {
     init() {}
     
     // Reload all data
-    func getData(dataStore : LeagueData) {
-        loadStandingsData(dataStore: dataStore)
-        loadScores(dataStore: dataStore)
-        loadSchedule(dataStore: dataStore)
+    func getData(_ dataStore : LeagueData) {
+        loadStandingsData(dataStore)
+        loadScores(dataStore)
+        loadSchedule(dataStore)
     }
     
     // Retrieve standings data
-    private func loadStandingsData(dataStore : LeagueData) {
+    fileprivate func loadStandingsData(_ dataStore : LeagueData) {
         Alamofire.request(standingsURL).responseString { response in
             if let source = response.result.value {
                 print("got source...")
@@ -46,7 +46,7 @@ class WebsiteData {
                             let wins = Int(chunks[1])!
                             let losses = Int(chunks[2])!
                             
-                            let team = Team.get(name: teamName)
+                            let team = Team.get(teamName)
                             team.division = division
                             let standing = Standing(team: team, wins: wins, losses: losses)
                             dataStore.standings.append(standing)
@@ -60,7 +60,7 @@ class WebsiteData {
     }
     
     // Retrieve scores data
-    private func loadScoresTable(tableName : String, onDone : ([Game]) -> Void) {
+    fileprivate func loadScoresTable(_ tableName : String, onDone : ([Game]) -> Void) {
         Alamofire.request(scoresURL).responseString { response in
             var games : [Game] = []
             if let source = response.result.value {
@@ -76,8 +76,8 @@ class WebsiteData {
                         let team2Score = Int(scoreStrings[1]) ?? 0
 
                         // Get teams
-                        let team1 = Team.get(name: gameNode.css(".column-1 strong")[0].text!)
-                        let team2 = Team.get(name: gameNode.css(".column-3 strong")[0].text!)
+                        let team1 = Team.get(gameNode.css(".column-1 strong")[0].text!)
+                        let team2 = Team.get(gameNode.css(".column-3 strong")[0].text!)
                         
                         // Make game object
                         let game = Game(team1: team1,
@@ -99,29 +99,29 @@ class WebsiteData {
     }
     
     // Load scores
-    private func loadScores(dataStore : LeagueData) {
-        loadScoresTable(tableName: "tablepress-8") { games in
+    fileprivate func loadScores(_ dataStore : LeagueData) {
+        loadScoresTable("tablepress-8") { games in
             dataStore.regularGames = games
         }
-        loadScoresTable(tableName: "tablepress-9") { games in
+        loadScoresTable("tablepress-9") { games in
             dataStore.playoffGames = games
         }
     }
     
     // Get schedule
-    public func loadSchedule(dataStore : LeagueData) {
+    open func loadSchedule(_ dataStore : LeagueData) {
         Alamofire.request(scheduleURL).responseString { response in
             if let source = response.result.value {
                 if let doc = HTML(html: source, encoding: .utf8) {
                     dataStore.schedule = []
                     for gameNode in doc.css("#tablepress-4 tbody tr") {
                         // Get teams
-                        let team1 = Team.get(name: gameNode.css(".column-1 strong")[0].text!)
+                        let team1 = Team.get(gameNode.css(".column-1 strong")[0].text!)
                         let iurl1 = gameNode.css(".column-1 img")[0]["src"]!
                         if (team1.imageURL == "") {
                             team1.imageURL = iurl1
                         }
-                        let team2 = Team.get(name: gameNode.css(".column-2 strong")[0].text!)
+                        let team2 = Team.get(gameNode.css(".column-2 strong")[0].text!)
                         let iurl2 = gameNode.css(".column-2 img")[0]["src"]!
                         if (team2.imageURL == "") {
                             team2.imageURL = iurl2

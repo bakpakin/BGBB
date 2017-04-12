@@ -20,19 +20,19 @@ class LeagueData {
     var regularGames : [Game] = []
     var schedule : [Game] = []
     
-    private init () {
+     init () {
         
     }
     
-    func addTeam(team: Team) {
+    func addTeam(_ team: Team) {
         teams.append(team)
     }
     
-    func addRegularGame(game: Game) {
+    func addRegularGame(_ game: Game) {
         regularGames.append(game)
     }
     
-    func addPlayoffGame(game: Game) {
+    func addPlayoffGame(_ game: Game) {
         playoffGames.append(game)
     }
     

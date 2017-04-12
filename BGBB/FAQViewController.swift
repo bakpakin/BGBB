@@ -60,11 +60,11 @@ class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.scrollIndicatorInsets = insets 
     }
     
-    func swipeRight(recognizer : UISwipeGestureRecognizer) {
+    func swipeRight(_ recognizer : UISwipeGestureRecognizer) {
         self.performSegue(withIdentifier: "MySegue", sender: self)
     }
     
-    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+    func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
         
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
@@ -87,7 +87,7 @@ class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:ExpandingTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! ExpandingTableViewCell
-        cell.set(content: dataSource[indexPath.row])
+        cell.set(dataSource[indexPath.row])
         
         return cell
     }
